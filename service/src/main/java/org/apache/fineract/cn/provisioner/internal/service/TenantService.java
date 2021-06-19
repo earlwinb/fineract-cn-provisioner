@@ -248,7 +248,7 @@ public class TenantService {
           final TenantDAO tenantDAO = new TenantDAO();
           tenantDAO.setIdentifier(tenant.getIdentifier());
           tenantDAO.setDriverClass(databaseConnectionInfo.getDriverClass());
-          tenantDAO.setDatabaseName(databaseConnectionInfo.getDatabaseName());
+          tenantDAO.setDatabaseName(databaseConnectionInfo.getDatabaseName().toLowerCase());
           tenantDAO.setHost(databaseConnectionInfo.getHost());
           tenantDAO.setPort(databaseConnectionInfo.getPort());
           tenantDAO.setUser(databaseConnectionInfo.getUser());
